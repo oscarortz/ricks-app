@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from "react";
+const BarraSuperior = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <header>
+      <nav>
+        <a href=""></a>
+        <a href="">Docs</a>
+        <a href="">About</a>
+        <a href="">SUPPORT US</a>
+      </nav>
+    </header>
+  );
+};
+
+const Encabezado = () => {
+  return (
+    <div>
+      <h1 className="rickApi">The Rick And Morty API</h1>
     </div>
   );
-}
+};
 
-export default App;
+export default Encabezado;
+export { BarraSuperior };

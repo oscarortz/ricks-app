@@ -1,13 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import reportWebVitals from "./reportWebVitals";
+import Encabezado from "./App";
+import { BarraSuperior } from "./App";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Personajes from "./personajes";
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <BarraSuperior />
+    <Encabezado />
+    <Personajes />
   </React.StrictMode>
 );
 
