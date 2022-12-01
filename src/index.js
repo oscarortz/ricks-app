@@ -5,13 +5,14 @@ import reportWebVitals from "./reportWebVitals";
 import Encabezado from "./App";
 import { BarraSuperior } from "./App";
 
-import Personajes from "./personajes";
+import PersonajesList from "./componente/PersonajesList";
+import Personaje from "./componente/Personaje";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BarraSuperior />
     <Encabezado />
-    <Personajes />
+    <PersonajesList className="cotenedor" />
   </React.StrictMode>
 );
 

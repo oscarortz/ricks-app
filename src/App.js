@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.css";
 const BarraSuperior = () => {
   return (
     <header>
@@ -14,7 +15,7 @@ const BarraSuperior = () => {
 
 const Encabezado = () => {
   return (
-    <div>
+    <div className="encabezado">
       <h1 className="rickApi">The Rick And Morty API</h1>
     </div>
   );
