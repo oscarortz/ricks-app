@@ -8,12 +8,15 @@ function Personaje({ personaje }) {
       <div>
         <div className="datos">
           <div className="contenido">
-            <Titulo>{personaje.name}</Titulo>
-            <ul>
-              <li>{personaje.status}</li>
-            </ul>
+            <div className="titulos">
+              <Titulo>{personaje.name}</Titulo>
+              <ul></ul>
+              <li>
+                {personaje.status} - {personaje.species}
+              </li>
+            </div>
             <p>Last know location:</p>
-            <Titulo>{personaje.location.name}</Titulo>
+            <Location>{personaje.location.name}</Location>
           </div>
         </div>
       </div>
@@ -21,14 +24,20 @@ function Personaje({ personaje }) {
   );
 }
 const Titulo = styled.h1`
-  font-size: 30px;
+  font-size: 23px;
   font-weight: bold;
-  color: blue;
+  color: #f0f3f4;
   transition: all;
   &:hover {
-    color: yellow;
+    color: #dc7633;
   }
 `;
-
+const Location = styled.h4`
+  font-size: 20px;
+  color: #f0f3f4;
+  &:hover {
+    color: #dc7633;
+  }
+`;
 const Status = styled.h3``;
 export default Personaje;
