@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-function Personaje({ personaje }) {
+function Personaje({ personaje, status }) {
   return (
     <div className="tarjeta">
       <img src={personaje.image} alt={personaje.name} />
@@ -10,10 +10,23 @@ function Personaje({ personaje }) {
           <div className="contenido">
             <div className="titulos">
               <Titulo>{personaje.name}</Titulo>
-              <ul></ul>
-              <li>
-                {personaje.status} - {personaje.species}
-              </li>
+              <div className="estatus">
+                <div
+                  className={
+                    personaje.status === "Alive"
+                      ? "green"
+                      : personaje.status === "Dead"
+                      ? "red"
+                      : personaje.status === "unknown"
+                      ? "black"
+                      : ""
+                  }
+                ></div>
+
+                <div className="contenedor-estatus">
+                  {personaje.status} - {personaje.species}
+                </div>
+              </div>
             </div>
             <p>Last know location:</p>
             <Location>{personaje.location.name}</Location>
@@ -39,5 +52,45 @@ const Location = styled.h4`
     color: #dc7633;
   }
 `;
-const Status = styled.h3``;
+
+const Bgcolor = (personaje) => {
+  if (personaje.status === "Alive") {
+    styled.div`
+      background-color: green;
+      border: 1px solid black;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: flex;
+    `;
+  }
+  if (personaje.status === "Dead") {
+    styled.div`
+      background-color: red;
+      border: 1px solid black;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: flex;
+    `;
+  } else {
+    styled.div`
+      background-color: black;
+      border: 1px solid black;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      display: flex;
+    `;
+  }
+};
+const Status = styled.div`
+  background-color: ${Bgcolor};
+  border: 1px solid black;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: flex;
+`;
+
 export default Personaje;

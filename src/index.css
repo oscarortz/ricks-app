@@ -100,3 +100,40 @@ p {
   margin: 10px;
   padding: 10px;
 }
+.estatus {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 10px;
+  align-items: center;
+}
+.contenedor-estatus {
+  margin: 0px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.green {
+  background-color: green;
+  border: 1px solid black;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: flex;
+}
+.red {
+  background-color: red;
+  border: 1px solid black;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: flex;
+}
+.black {
+  background-color: black;
+  border: 1px solid black;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  display: flex;
+}
