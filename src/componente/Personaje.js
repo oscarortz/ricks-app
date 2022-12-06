@@ -53,44 +53,4 @@ const Location = styled.h4`
   }
 `;
 
-const Bgcolor = (personaje) => {
-  if (personaje.status === "Alive") {
-    styled.div`
-      background-color: green;
-      border: 1px solid black;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      display: flex;
-    `;
-  }
-  if (personaje.status === "Dead") {
-    styled.div`
-      background-color: red;
-      border: 1px solid black;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      display: flex;
-    `;
-  } else {
-    styled.div`
-      background-color: black;
-      border: 1px solid black;
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      display: flex;
-    `;
-  }
-};
-const Status = styled.div`
-  background-color: ${Bgcolor};
-  border: 1px solid black;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  display: flex;
-`;
-
 export default Personaje;
